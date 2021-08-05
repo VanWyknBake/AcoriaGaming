@@ -1,0 +1,156 @@
+{% load static %}
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200&display=swap" rel="stylesheet">
+
+
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+
+        <!-- ===== BOX ICONS ===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <style>
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align:left;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: var(--light-color)}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: var(--dark-color);
+  color:white;
+}
+</style>
+
+        <title>AG</title>
+
+
+      
+    </head>
+    <body>
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="nLBHm8GF"></script>
+        <!--===== HEADER =====-->
+        
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            {% block content %}{% endblock content %}
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer section tex text-center">
+            <div class="footer__container bd-grid text text-center">
+                <div class="footer__data">
+                    <h2 class="footer__title">Acoria Gaming</h2>
+                    <p class="contact__text"><a href="#home" class="footer__link">Next Level</a></p>
+
+                <div class="footer__data">
+                    <h2 class="footer__title">EXPLORE</h2>
+                    <ul>
+                        <li><a href="{% url 'index' %}" class="footer__link">Home</a></li>
+                        <li><a href="{% url 'tournaments' %}" class="footer__link">Tournaments</a></li>
+                        <li><a href="{% url 'streamers' %}" class="footer__link">Streamers</a></li>
+
+                        <li></li>
+                        
+                    </ul>
+                </div><br>
+                
+                <div class="footer__data">
+                    <h2 class="footer__title">FOLLOW US</h2>
+                    <script src="https://apis.google.com/js/platform.js"></script>
+                      <div class="g-ytsubscribe" data-channelid="UCqtjpe4xPenkKrYST_y5UKA" data-layout="default" data-count="default"></div><br>
+
+                    <a href="https://www.facebook.com/AcoriaGaming" class="footer__social"><i class='bx bxl-facebook' ></i></a>
+                    <a href="https://discord.gg/HbPMygqRzc" class="footer__social"><i class='bx bxl-discord' ></i></a>
+                    <a href="https://www.twitter.com/acoriagaming" class="footer__social"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.youtube.com/channel/UCqtjpe4xPenkKrYST_y5UKA" class="footer__social"><i class='bx bxl-youtube' ></i></a>
+                    <a href="https://twitch.tv/acoriagaming" class="footer__social"><i class='bx bxl-twitch' ></i></a>
+                </div>
+                
+
+            </div><br>
+            <p class="text text-center"><small>Copyright &copy; Acoria Gaming. All rights reserved.</small></p>
+        </footer>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="{% static 'assets/js/main.js' %}"></script>
+        <!-- GetButton.io widget -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <a href="https://api.whatsapp.com/send/?phone=27618818702&text&app_absent=0"class="float" target="_blank">
+
+                <i class="fa fa-whatsapp my-float"></i>
+
+        </a>
+        
+
+
+<!-- CSS for WhatsApp float icon -->
+<style>
+.float:hover {
+    background-color:#25d366;
+	color:#FFF;
+}
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#FFF;
+	color:#25d366;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px black;
+  z-index:10;
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+
+ </style>
+ <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="4vcMw0i5"></script>
+
+    </body>
+</html>
